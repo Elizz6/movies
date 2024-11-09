@@ -42,6 +42,7 @@ export default function MovieForm() {
             const fileExt = file.name.split('.').pop();
             const fileName = `${Math.random().toString(36).substring(2)}-${Date.now()}.${fileExt}`;
             
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const { data, error } = await supabase.storage
                 .from('movie-posters')
                 .upload(fileName, file);
