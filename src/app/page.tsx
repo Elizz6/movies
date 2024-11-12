@@ -4,6 +4,8 @@ import MovieList from '@/components/MovieList';
 import AddMovieDialog from '@/components/AddMovieDialog';
 import { Toaster } from '@/components/ui/toaster';
 
+export const dynamic = "force-dynamic";
+
 export default async function MoviesPage() {
   const { data: movies } = await supabase
     .from('movies')
